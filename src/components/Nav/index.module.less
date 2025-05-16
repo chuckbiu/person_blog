@@ -1,0 +1,41 @@
+@import "../../styles/common.less";
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: @main-color;
+  padding: 5px 50px;
+  height: 70px;
+  .home {
+    font-size: 36px;
+    text-align: center;
+    height: 100%;
+    .homeIcon {
+      padding: 0px 10px 3px 10px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+    }
+    .homeIcon:hover {
+      cursor: pointer;
+      background-color: @bg-color;
+      border-radius: @midRadius;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .navList {
+    display: flex;
+    .navItem {
+      font-size: 24px;
+      margin-right: 20px;
+      text-align: center;
+      padding: 0px 10px 3px 10px;
+      border-radius: @midRadius;
+      transition: all 0.3s ease-in-out;
+    }
+    .navItem:hover {
+      cursor: pointer;
+      background-color: @bg-color;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
