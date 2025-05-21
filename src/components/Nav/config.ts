@@ -1,11 +1,11 @@
 export const useLinkList = () => {
     const navArr = [
       { name: '文章', to: '/articles' },
-      { name: '分类', to: '/classes' },
+      { name: '说说', to: '/saying' },
       { name: '留言', to: '/msg' },
       // { name: '友链', to: '/link' },
       { name: '作品', to: '/show' },
-      { name: '图库', to: '/log' },
+      { name: '图库', to: '/photo' },
       { name: '关于', to: '/about' }
     ];
     const secondNavArr = [

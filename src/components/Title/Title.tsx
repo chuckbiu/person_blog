@@ -1,5 +1,5 @@
 import React from 'react'
-
+import TitleStyle from './index.module.less'
 interface TitleProps {
     title: string
     subTitle?: string
@@ -7,9 +7,9 @@ interface TitleProps {
 
 const Title: React.FC<TitleProps> = ({ title, subTitle }) => {
     return (
-        <div className="title">
-            <h1>{title}</h1>
-            {subTitle && <h2>{subTitle}</h2>}
+        <div className={TitleStyle.titleContainer}>
+            <div className={TitleStyle.title}>{title}</div>
+            {subTitle && <div className={TitleStyle.subTitle}>{subTitle}</div>}
         </div>
     )
 }

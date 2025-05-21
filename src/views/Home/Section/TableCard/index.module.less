@@ -1,0 +1,49 @@
+@import '../../../../styles/common.less';
+.sectionLeft {
+    background-color: @bg-color;
+    padding: 20px 10px 20px 20px;
+    border-radius: @bigRadius;
+    cursor: pointer;
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    .content {
+      font-size: 16px;
+      line-height: 30px;
+      color: #666;
+      text-indent: 2em;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      .time {
+        font-size: 14px;
+        color: #999;
+        box-sizing: border-box;
+        display: inline-block;
+        background-color:  @btn-color;
+        border-radius: @midRadius;
+        padding: 10px;
+      }
+      .tag {
+        display: flex;
+        .tagItem {
+            font-size: 14px;
+            color: #999;
+            box-sizing: border-box;
+            display: inline-block;
+            background-color: @btn-color;
+            border-radius: @midRadius;
+            padding: 10px;
+            margin-left: 20px;
+        }
+      }
+    }
+  }

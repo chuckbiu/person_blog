@@ -5,17 +5,19 @@ import Section from './Section/Section';
 import Title from '../../components/Title/Title';
 
 interface HomeProps {
-  
+
 }
 
 const Home: React.FC<HomeProps> = () => {
-  return   (
+  return (
     <>
-        <Title title="Home" />
-      <div>
-      <Section />
+     <div className={HomeStyle.container}>
+     <Title title="Home" subTitle='Welcome to my blog' />
+      <div className={HomeStyle.home}>
+        <Section />
         <Aside />
       </div>
+     </div>
     </>
   )
 

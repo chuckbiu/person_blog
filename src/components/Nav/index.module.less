@@ -5,9 +5,9 @@
   align-items: center;
   background-color: @main-color;
   padding: 5px 50px;
-  height: 70px;
+  height: 60px;
   .home {
-    font-size: 36px;
+    font-size: 30px;
     text-align: center;
     height: 100%;
     .homeIcon {
@@ -31,11 +31,17 @@
       padding: 0px 10px 3px 10px;
       border-radius: @midRadius;
       transition: all 0.3s ease-in-out;
+      color: @font-color;
+      text-decoration: none;
     }
     .navItem:hover {
       cursor: pointer;
       background-color: @bg-color;
       transition: all 0.3s ease-in-out;
+    }
+    .navItemActive {
+      .navItem();
+      background-color: @bg-color;
     }
   }
 }
