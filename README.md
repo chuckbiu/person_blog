@@ -124,7 +124,7 @@ marked.setOptions({
 
 2. **代码高亮（使用 highlight.js）**
 
-```
+```shell
 npm install highlight.js
 ```
 

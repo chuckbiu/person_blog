@@ -1,0 +1,59 @@
+@import url("../../styles/common.less");
+.tabCard {
+  height: 40px;
+  width: 400px;
+  margin: 0 auto;
+  .tabList {
+    background-color: @font-color2;
+    border-radius: @midRadius;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 5px;
+    height: 100%;
+    .tabListitem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .tabListItemContent {
+        box-sizing: border-box;
+        padding: 0 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        font-size: @font-size;
+        color: @gray8;
+
+        &:hover {
+          background-color: @bg-color;
+          color: @gray9;
+        }
+        &:active {
+          background-color: @bg-color;
+          color: @gray9;
+        }
+
+        &.active {
+          background-color: @bg-color;
+          color: @gray9;
+        }
+      }
+    }
+  }
+}
+
+// 图片列表容器，使用flex布局实现多行多列自适应
+.photoList {
+  display: grid; // 启用grid布局
+  grid-template-columns: 1fr 1fr 1fr 1fr; // 自动填充列，最小宽度260px，最大宽度1fr;
+  gap: 20px; // 列之间的间距
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+

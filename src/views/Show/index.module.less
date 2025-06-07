@@ -1,0 +1,66 @@
+@import url("../../styles/common.less");
+.container {
+  height: 100vh;
+  text-align: center;
+  h1 {
+    margin-top: 100px;
+    font-size: 36px;
+  }
+}
+.imageGallery {
+  display: grid;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  .imageContainer {
+    height: 330px;
+    position: relative;
+    border-radius: @bigRadius;
+    cursor: pointer;
+    .image {
+      width: 100%;
+    }
+    .content {
+      position: absolute;
+      color: @font-color2;
+      font-size: 36px;
+      font-weight: @font-weight-1;
+      top: 20px;
+      width: 100%;
+      .description {
+        margin: 0 auto;
+        text-align: left;
+        margin-left: 40px;
+      }
+      .overlay {
+        border-top: 5px solid @font-color2;
+        width: 100%;
+        margin-left: 40px;
+        width: 80%;
+        text-align: left;
+        font-weight: 400;
+        font-size: 24px;
+
+        display: none;
+      }
+    }
+
+    &:hover {
+        .overlay {
+          display: block;
+          animation: fadeIn .3s ease-in-out;
+        }
+        transform: scale(1.03);
+        transition: transform 0.3s ease-in-out;
+        z-index: 2;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

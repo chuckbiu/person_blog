@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-    HeatMapOutlined
+    HomeOutlined
 } from '@ant-design/icons';
 
 import NavStyle from './index.module.less';
@@ -18,7 +18,7 @@ const Nav: React.FC = () => {
                     <div className={NavStyle.homeIcon} onClick={() => {
                         navigate('/');
                     }}>
-                        <HeatMapOutlined />
+                        <HomeOutlined />
                     </div>
                 </div>
                 <div className={NavStyle.navList}>

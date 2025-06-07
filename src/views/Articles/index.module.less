@@ -1,0 +1,52 @@
+@import url("../../styles/common.less");
+.header {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.container {
+    width: 1000px;
+    padding: 40px;
+    background-color: @bg-color;
+    margin: auto;
+    border-radius: @midRadius;
+    .articleList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        .articleheader {
+            display: flex;
+            height: 40px;
+            margin-bottom: 20px;
+            justify-content: space-between;
+            width: 100%;
+            .search {
+                border-radius: @midRadius;
+                width: calc(100% - 80px);
+            }
+            .icon {
+                width: 80px;
+                line-height: 40px;
+                font-size: 20px;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        .articleItem {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 40px;
+            width: 100%;
+            background-color: @main-color;
+            border-radius: @midRadius;
+            padding: 0 20px;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+      }
+}
