@@ -3,16 +3,13 @@ import { Card, Divider, Switch } from "antd";
 import styles from "./index.module.less";
 import AboutMe from "./AboutMe/AboutMe";
 import AboutSite from "./AboutSite/AboutSite";
+import Layout from "../../components/Layout/Layout";
 
 const About: React.FC = () => {
   const [showMe, setShowMe] = useState(false);
   return (
-    <>
-      <div className={styles.title}>
-        <h1>关于</h1>
-      </div>
+    <Layout title={'关于自己'}>
       <div className={styles.container}>
-
         <div className={styles.switchRow}>
           <Switch checked={showMe} onChange={setShowMe} />
           <span className={styles.switchLabel}>{showMe ? "关于我" : "关于本站"}</span>
@@ -22,7 +19,7 @@ const About: React.FC = () => {
           <Divider />
         </Card>
       </div>
-    </>
+    </Layout>
   );
 };
 

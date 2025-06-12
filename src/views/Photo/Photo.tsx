@@ -38,9 +38,6 @@ const Photo: React.FC = () => {
   return (
     <>
       <div>
-        <h1>图库</h1>
-      </div>
-      <div>
         {/* 分类标签 */}
         <div className={PhotoStyles.tabCard}>
           <ul className={PhotoStyles.tabList}>

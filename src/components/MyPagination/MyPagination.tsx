@@ -1,6 +1,6 @@
 import { Pagination } from 'antd';
 import React, { useEffect, useState } from 'react';
-
+import s from './index.module.less'
 
 interface Props {
     current?: number;
@@ -26,7 +26,7 @@ return (
             // showTitle 是否显示原生 tooltip 页码提示
             // showQuickJumper 是否显示快速跳转
             // showSizeChanger 是否显示切换每页条数
-          <div id='MyPagination'>
+          <div id='MyPagination' className={s.pageBox}>
               <Pagination
                 current={current}
                 defaultPageSize={defaultPageSize}

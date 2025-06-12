@@ -1,56 +1,50 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './index.module.less';
-
+import { blogAdminUrl } from '../../utils/constant'
+import Layout from '@/components/Layout/Layout'
 interface SayType {
   id: string;
   content: string;
   date: string;
   avatar?: string;
 }
-
 // mock 数据
 const sayList: SayType[] = [
   {
     id: '1',
     content: '😢 加油·  😢',
     date: '2024-03-18',
-    avatar: 'https://picsum.photos/id/669/80/80'
   },
   {
     id: '2',
-    content: '不丑一段文件夹，不丑一段代码，不丑一段人生',
+    content: '尽管事不如意，还须继续努力',
     date: '2023-09-23',
-    avatar: 'https://picsum.photos/id/670/80/80'
   },
   {
     id: '3',
     content: '人生得意须尽欢，莫使金樽空对月',
     date: '2023-04-04',
-    avatar: 'https://picsum.photos/id/671/80/80'
   },
   {
     id: '4',
     content: '道阻且长，行则将至',
     date: '2022-06-01',
-    avatar: 'https://picsum.photos/id/672/80/80'
   }
 ];
-
 const Saying: React.FC = () => {
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-
   return (
-    <div className={styles.container}>
-      <h2 className={styles.title}>自言自语</h2>
+   <Layout
+    title="自言自语"
+   >
+     <div className={styles.container}>
       <div className={styles.grid}>
         {sayList.map(say => (
           <div key={say.id} className={styles.card}>
-            {say.avatar && (
+            {(
               <img
-                src={say.avatar}
+                src={blogAdminUrl}
                 alt="avatar"
                 className={styles.avatar}
-                onClick={() => say.avatar && setPreviewUrl(say.avatar)}
               />
             )}
             <div className={styles['content-wrapper']}>
@@ -60,13 +54,10 @@ const Saying: React.FC = () => {
           </div>
         ))}
       </div>
-      {/* 图片预览弹窗 */}
-      {previewUrl && (
-        <div className={styles.previewMask} onClick={() => setPreviewUrl(null)}>
-          <img src={previewUrl} alt="preview" className={styles.previewImg} />
-        </div>
-      )}
     </div>
+
+
+   </Layout>
   );
 };
 

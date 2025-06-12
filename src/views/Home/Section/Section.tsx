@@ -33,7 +33,7 @@ const Section: React.FC<SectionProps> = () => {
             {data?.map((item) => (
                 <TableCard key={item.id} title={item.title} onClick={() => navigate(`/post?id=${item.id}`)} content={item.content} />
             ))}
-            <MyPagination />
+            <MyPagination total={20} />
         </section>
     )
 }

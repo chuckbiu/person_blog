@@ -1,5 +1,6 @@
 import React from "react";
 import Showstyles from "./index.module.less"; // 导入样式
+import Layout from "../../components/Layout/Layout";
 
 const Show = () => {
     const [composition, setComposition] = React.useState([{
@@ -30,9 +31,7 @@ const Show = () => {
     ])
 
     return (
-        <div className={Showstyles.container}>
-            <h1 >作品展示页面</h1>
-
+        <Layout title={'作品展示'}>
             <div className={Showstyles.imageGallery}>
                 {composition?.map((image) => (
                     <div key={image.id} className={Showstyles.imageContainer} style={{ backgroundImage: `url(${image.image})` }}>
@@ -47,10 +46,8 @@ const Show = () => {
                     </div>
                 ))
                 }
-
-
             </div>
-        </div>
+        </Layout>
     );
 };
 

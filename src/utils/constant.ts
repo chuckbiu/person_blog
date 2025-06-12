@@ -1,17 +1,17 @@
 // 博客的云环境ID
-export const env = 'react-blog-admin-test-1a3424a4e2';
+export const env = 'chuck-blog-9gwoks523f0cdf8a';
 
-export const source_github = 'https://github.com/lzxjack/react-blog';
+export const source_github = 'https://github.com/chuckbiu/person_blog';
 
 export const icp_site = 'https://beian.miit.gov.cn/#/Integrated/index';
 export const icp_no = '123123123-1';
 
-export const blogAdminUrl = 'https://admin.lzxjack.top:81';
+export const blogAdminUrl = 'https://img.picui.cn/free/2025/06/12/684a845976686.jpg';
 
-export const siteTitle = '飞鸟小站';
+export const siteTitle = '手札小站';
 
 // GitHub地址
-export const githubUrl = 'https://github.com/lzxjack';
+export const githubUrl = 'https://github.com/chuckbiu';
 // CSDN地址
 export const csdnUrl = 'https://blog.csdn.net/Jack_lzx';
 

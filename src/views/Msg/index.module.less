@@ -1,0 +1,83 @@
+.message-board {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  
+    .form {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  
+      input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+  
+      button {
+        background-color: #409eff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+  
+        &:hover {
+          background-color: #66b1ff;
+        }
+      }
+    }
+  
+    .messages {
+      margin-top: 24px;
+  
+      .message-item {
+        background: #f7f7f7;
+        padding: 12px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+  
+        .meta {
+          color: #888;
+          font-size: 12px;
+          margin-bottom: 4px;
+        }
+  
+        .content {
+          font-size: 14px;
+          color: #333;
+        }
+      }
+    }
+  }
+  
+  /* H5 适配 */
+  @media screen and (max-width: 768px) {
+    .message-board {
+      padding: 12px;
+  
+      .form {
+        padding: 12px;
+      }
+  
+      input, textarea {
+        font-size: 16px;
+      }
+  
+      button {
+        font-size: 16px;
+      }
+  
+      .messages {
+        .message-item {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  
