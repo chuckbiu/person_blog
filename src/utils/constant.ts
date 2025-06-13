@@ -4,7 +4,7 @@ export const env = 'chuck-blog-9gwoks523f0cdf8a';
 export const source_github = 'https://github.com/chuckbiu/person_blog';
 
 export const icp_site = 'https://beian.miit.gov.cn/#/Integrated/index';
-export const icp_no = '123123123-1';
+export const icp_no = '正在备案申请中';
 
 export const blogAdminUrl = 'https://img.picui.cn/free/2025/06/12/684a845976686.jpg';
 
@@ -19,9 +19,9 @@ export const csdnUrl = 'https://blog.csdn.net/Jack_lzx';
 export const count_id = 'cd045e756100126d005169f014931c65';
 
 // 微信二维码地址
-export const weChatQRCode = 'https://img.lzxjack.top:99/202203302344287.webp';
+export const weChatQRCode = 'https://img.picui.cn/free/2025/06/13/684c1cc2b5827.png';
 // QQ二维码地址
-export const QQ_QRCode = 'https://img.lzxjack.top:99/202203302344487.webp';
+export const QQ_QRCode = 'https://img.picui.cn/free/2025/06/13/684c1cc209d38.png';
 
 // 透明头像
 export const cardUrl = 'https://img.lzxjack.top:99/202203302348298.webp';

@@ -24,6 +24,7 @@ const Home: React.FC<HomeProps> = () => {
       // 返回查询到的数据和总数
       console.log(data);
     }
+    fetchData()
     getTitle.then(res => {
       setSubTitle(res)
     })

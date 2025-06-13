@@ -20,6 +20,7 @@
     position: relative;
     border-radius: @bigRadius;
     cursor: pointer;
+    overflow: hidden;
     .image {
       width: 100%;
     }
@@ -30,6 +31,7 @@
       font-weight: @font-weight-1;
       top: 20px;
       width: 100%;
+      z-index: 2;
       .description {
         margin: 0 auto;
         text-align: left;
@@ -47,20 +49,35 @@
         display: none;
       }
     }
-
+    .overlaygrey {
+      background-color: rgba(0, 0, 0, 0.322);
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
     &:hover {
-        .overlay {
-          display: block;
-          animation: fadeIn .3s ease-in-out;
-        }
-        transform: scale(1.03);
-        transition: transform 0.3s ease-in-out;
-        z-index: 2;
+      .overlaygrey {
+        display: block;
+      }
+    }
+    &:hover {
+      .overlay {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+
+      transform: scale(1.03);
+      transition: transform 0.3s ease-in-out;
+      z-index: 2;
     }
   }
 }
-
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

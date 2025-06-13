@@ -30,8 +30,10 @@ const Layout: React.FC<Props> = ({
 
   return (
     <>
-      <PageTitle title={title} >
-      </PageTitle>
+      {
+        title?.length > 0 ? <PageTitle title={title} >
+        </PageTitle> : <div style={{ height: '80px' }}></div>
+      }
       <div className={s.content}>{children}</div>
     </>
   );

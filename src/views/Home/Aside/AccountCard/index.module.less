@@ -12,11 +12,35 @@
     padding: 0 15px;
     margin-top: 10px;
     .accountCardItem {
-        line-height: 30px;
+        position: relative; // Needed for positioning the QR code
+        line-height: 40px;
         width: 30px;
-        height: 20px;
+        height: 40px;
         font-size: 20px;
         cursor: pointer;
+        transition: all 0.3s ease; // Smooth transition for hover effect
+        padding: 5px; // Add some padding for the hover background
+        border-radius: @midRadius; // Match parent border radius
+        &:hover {
+            background-color: @main-color; // Subtle background color on hover
+            transform: translateY(-2px); // Slight lift effect
+            
+        }
+
+        .qrCodeContainer {
+            position: absolute;
+            width: 120px;
+            bottom: 40px; // Position above the icon
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            padding: 10px;
+            border-radius: @midRadius;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            z-index: 10; // Ensure it's above other content
+            white-space: nowrap; // Prevent content from wrapping
+            // You might want to define a specific width/height for the QR code image
+        }
     }
 }
 

@@ -7,8 +7,6 @@ import Layout from "../../components/Layout/Layout";
 
 const Articles: React.FC = () => {
   const [articleList, setArticleList] = React.useState([{ title: "文章1", date: "2022-01-01" }, { title: "文章2", date: "2022-01-02" }, { title: "文章3", date: "2022-01-03" }, { title: "文章4", date: "2022-01-04" }, { title: "文章5", date: "2022-01-05" }, { title: "文章6", date: "2022-01-06" }, { title: "文章7", date: "2022-01-07" }, { title: "文章8", date: "2022-01-08" }, { title: "文章9", date: "2022-01-09" }, { title: "文章10", date: "2022-01-10" }])
-  // const [articleList, setArticleList] = React.useState([])
-  // React.useEffect(() => {
   return (
     <Layout title={'文章'} >
       <div className={ArticleStyle.container}>

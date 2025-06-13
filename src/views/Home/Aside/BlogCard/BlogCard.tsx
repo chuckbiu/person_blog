@@ -1,21 +1,22 @@
 import React from 'react';
 import s from './index.module.less';
-
+import { blogAdminUrl } from '../../../../utils/constant';
+import { useTime } from '../../../../utils/hooks/useTime' 
 const BlogCard: React.FC = () => {
-
+  const { timeText } = useTime()
   return (
     <>
       <div className={s.blogCard}>
         {/* 头像 */}
         <div className={s.avatar}>
-          <img src="https://i.postimg.cc/63JC7kH9/photo-2024-11-05-12-20-22.jpg" alt="" />
+          <img src={blogAdminUrl} alt="" />
         </div>
         <div className={s.title}>
           <h2>
             Chuck
           </h2>
           <span>
-            道阻且长，行则将至
+            大家  { timeText } 欢迎来到我的博客
           </span>
         </div>
         <div className={s.stats}>

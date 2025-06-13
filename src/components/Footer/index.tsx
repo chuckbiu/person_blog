@@ -6,9 +6,13 @@ const Footer: React.FC = () => {
     return (
        <footer className={FooterStyle.footer}>
             <span>
-                @2023-2025 个人博客
+                @2025 手札小站 
             </span>
             <span>
+                | 
+            </span>
+            <span>
+
                 { icp_no ? `备案号：${icp_no}` : ''}
             </span>
         </footer> 

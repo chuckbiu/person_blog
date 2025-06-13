@@ -1,4 +1,5 @@
 @import "../../styles/common.less";
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -7,6 +8,13 @@
   padding: 5px 50px;
   height: 60px;
   color: @font-color2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  // transform: ;
   .home {
     font-size: 30px;
     text-align: center;
@@ -26,7 +34,7 @@
   .navList {
     display: flex;
     .navItem {
-      font-size: 16px;
+      font-size: @font-size;
       margin-right: 20px;
       text-align: center;
       padding: 0px 10px 3px 10px;
@@ -45,4 +53,47 @@
       background-color: @bg-color;
     }
   }
+}
+
+@keyframes scrollAnimation {
+  0% {
+    top: -80px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+// Define the keyframe animations
+@keyframes slideOutUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+.slideOut {
+  animation-name: slideOutUp;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards; // Keeps the element in its final state (hidden)
+}
+
+.slideIn {
+  animation-name: slideInDown;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards; // Keeps the element in its final state (visible)
 }

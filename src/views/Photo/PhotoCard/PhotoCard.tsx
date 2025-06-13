@@ -7,7 +7,7 @@ interface PhotoCardProps {
     desc: string;
     category: string;
 }
-const PhotoCard: React.FC<PhotoCardProps> = (props, ) => {
+const PhotoCard: React.FC<PhotoCardProps> = (props) => {
     return (
         <div className={PhotoCardStyles.photoCard} key={props.url}>
             <Image
@@ -17,8 +17,12 @@ const PhotoCard: React.FC<PhotoCardProps> = (props, ) => {
                 width="100%"
                 height="100%"
                 style={{ objectFit: 'cover' }}
-                placeholder
-                fallback="https://via.placeholder.com/260x234?text=No+Image"
+                placeholder={
+                    < Image
+                        preview={false}
+                        src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png?x-oss-process=image/blur,r_50,s_50/quality,q_1/resize,m_mfit,h_200,w_200"
+                    />
+                }
             />
             <div className={PhotoCardStyles.photoInfo}>
                 <div className={PhotoCardStyles.photoTitle}>{props.title}</div>

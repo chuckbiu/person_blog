@@ -8,10 +8,10 @@ function App() {
   return (
     <>
     <div className={AppStyle.Appbox}>
-    <Nav />
-    <Main />
-    <Footer />
-    <BackTop />
+      <Nav />
+      <Main />
+      <Footer />
+      <BackTop />
     </div>
     </>
   )
