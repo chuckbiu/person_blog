@@ -14,6 +14,8 @@ export const siteTitle = '手札小站';
 export const githubUrl = 'https://github.com/chuckbiu';
 // CSDN地址
 export const csdnUrl = 'https://blog.csdn.net/Jack_lzx';
+// 掘金地址
+export const juejinUrl = 'https://juejin.cn/user/2881162352797479';
 
 // siteCount ID
 export const count_id = 'cd045e756100126d005169f014931c65';

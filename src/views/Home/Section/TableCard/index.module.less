@@ -1,50 +1,62 @@
-@import '../../../../styles/common.less';
+@import "../../../../styles/common.less";
 .sectionLeft {
-    background-color: #fff;
-    padding: 20px 10px 20px 20px;
-    border-radius: @midRadius;
-    cursor: pointer;
-    margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px 10px 20px 20px;
+  border-radius: @midRadius;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  .content {
     .title {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      align-items: center;
+      font-size: 20px;
+      font-weight: 400;
+      margin-top: 20px;
+      align-items: left;
       display: flex;
-      justify-content: center;
+      justify-content: left;
+      &:hover {
+        color: @main-color;
+        transition: all 0.3s ease-in;
+      }
     }
     .content {
-      font-size: 16px;
-      line-height: 30px;
+      font-size: 14px;
       color: #666;
-      text-indent: 2em;
+      font-weight: 300;
     }
     .footer {
       display: flex;
-      justify-content: space-between;
+      justify-content: left;
       align-items: center;
       margin-top: 20px;
       .time {
-        font-size: 14px;
-        color: #999;
-        box-sizing: border-box;
-        display: inline-block;
-        background-color:  @btn-color;
-        border-radius: @midRadius;
-        padding: 10px;
       }
       .tag {
         display: flex;
+        flex-direction: row;
         .tagItem {
-            font-size: 14px;
-            color: #999;
-            box-sizing: border-box;
-            display: inline-block;
-            background-color: @btn-color;
-            border-radius: @midRadius;
-            padding: 10px;
-            margin-left: 20px;
+        }
+      }
+    }
+    .tag {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      .label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .labelItem {
+          display: flex;
+          align-items: center;
         }
       }
     }
   }
+  .photo {
+  }
+  .tableicon {
+    height: 20px;
+    width: 20px;
+  }
+}

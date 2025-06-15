@@ -1,11 +1,13 @@
 import React from 'react';
 
 interface JuejinProps {
-    juejinStyle: React.CSSProperties;
+    juejinStyle?: React.CSSProperties;
+    onClick?: () => void;
 }
-const Juejin: React.FC<JuejinProps> = (props) => {
+const Juejin: React.FC<JuejinProps> = ({juejinStyle, onClick}) => {
 
-    return (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style={props.juejinStyle}><path d="M288 32c17.7 0 32 14.3 32 32l0 256c0 88.4-71.6 160-160 160S0 408.4 0 320l0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32c0 53 43 96 96 96s96-43 96-96l0-256c0-17.7 14.3-32 32-32z"/></svg>);
+
+    return (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style={juejinStyle} onClick={onClick}><path d="M288 32c17.7 0 32 14.3 32 32l0 256c0 88.4-71.6 160-160 160S0 408.4 0 320l0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32c0 53 43 96 96 96s96-43 96-96l0-256c0-17.7 14.3-32 32-32z"/></svg>);
 };
 
 export default Juejin;

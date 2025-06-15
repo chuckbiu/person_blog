@@ -7,19 +7,20 @@ const Show = () => {
         id: 1, title: "Vue3 组件库", image: "https://img.picui.cn/free/2025/06/13/684bd13ab4f55.png", description: "优雅而强大的 Vue 3 组件库为开发者打造的下一代组件库", link: 'https://www.silverui.asia/'
     }, {
         id: 2,
-        title: "作品2",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-        description: "这是一个描述"
+        title: "后端渲染Nuxt 网站",
+        image: "https://img.picui.cn/free/2025/06/15/684e94ac8cded.png",
+        description: "使用nuxt.js 构建后端渲染的网站",
+        link: 'https://github.com/chuckbiu/oppo-web-nuxt'
     },
     {
         id: 3,
-        title: "作品3",
+        title: "前台模板项目",
         image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
         description: "这是一个描述"
     },
     {
         id: 4,
-        title: "作品4",
+        title: "Vue3 + Ts 后台管理",
         image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
         description: "这是一个描述"
     }
