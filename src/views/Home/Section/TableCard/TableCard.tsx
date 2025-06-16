@@ -42,7 +42,7 @@ const TableCard: React.FC<TableCardProps> = ({ summary, title, onClick, createBy
                                 <div className={TableCart.label}>
                                     <div className={TableCart.labelItem}>
                                         <LabelIcon style={{ width: '13px', height: '13px' }}></LabelIcon>
-                                        <span>前端</span>
+                                        <span>{title == 'Python 基础语法' ? 'Python' : '前端'}</span>
                                     </div>
                                     {/* <div className={TableCart.labelItem}>
                                         <LabelIcon style={{ width: '13px', height: '13px' }}></LabelIcon>

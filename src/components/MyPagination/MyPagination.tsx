@@ -34,6 +34,8 @@ return (
                 showSizeChanger={false}
                 showTitle={false}
                 onChange={(page: number) => {
+                    setPage?.(page);
+                    window.scrollTo(0, scrollToTop);
                     console.log('page', page)
                 }}
                 />
