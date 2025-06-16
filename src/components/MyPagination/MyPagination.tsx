@@ -12,7 +12,7 @@ interface Props {
     setNavShow?: Function;
   }
 const MyPagination: React.FC<Props> = ({ current,
-    defaultPageSize = 8,
+    defaultPageSize = 6,
     total = 0,
     setPage,
     scrollToTop = 0,

@@ -8,9 +8,6 @@ import GithubSlugger from 'github-slugger';
 
 // MarkdownViewer 组件：接收 markdown 字符串，渲染 HTML 并生成目录
 export function MarkdownViewer({ markdown }) {
-
-
-
   const [html, setHtml] = useState('');
   const [headings, setHeadings] = useState([]);
 
@@ -19,7 +16,7 @@ export function MarkdownViewer({ markdown }) {
 
     // 配置 marked 渲染器
     const renderer = new marked.Renderer();
-    renderer.heading = function({ tokens, depth }) {
+    renderer.heading = function ({ tokens, depth }) {
       // 获取标题文本并生成小写 slug
       const text = this.parser.parseInline(tokens);
       // 生成 ID：去掉非字母数字，用短横线连接
@@ -37,7 +34,7 @@ export function MarkdownViewer({ markdown }) {
     });
 
     // 解析 markdown 得到原生 HTML
-    const rawHtml = marked.parse(markdown);
+    const rawHtml = marked.parse(markdown || '');
 
     setHtml(rawHtml);
     slugger.reset(); // 每次渲染前重置状态
@@ -55,7 +52,6 @@ export function MarkdownViewer({ markdown }) {
       });
     });
     setHeadings(toc);
-    console.log(toc);
   }, [markdown]);
 
   return (

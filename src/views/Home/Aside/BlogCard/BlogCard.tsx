@@ -4,7 +4,6 @@ import { blogAdminUrl } from '../../../../utils/constant';
 import { useTime } from '../../../../utils/hooks/useTime' 
 const BlogCard: React.FC = () => {
   const { timeText } = useTime()
-  console.log(timeText)
   return (
     <>
       <div className={s.blogCard}>

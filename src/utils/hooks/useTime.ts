@@ -1,6 +1,5 @@
 export const useTime = () => {
     const hour = new Date().getHours();
-    console.log(hour)
     const timeText =
       hour < 6
         ? '凌晨好'
@@ -10,7 +9,7 @@ export const useTime = () => {
         ? '上午好'
         : hour < 13
         ? '中午好'
-        : hour < 17
+        : hour < 18
         ? '下午好'
         : hour < 19
         ? '傍晚好'

@@ -6,6 +6,7 @@
   cursor: pointer;
   margin-bottom: 20px;
   display: flex;
+  height: 200px;
   .content {
     .title {
       font-size: 20px;
@@ -23,32 +24,59 @@
       font-size: 14px;
       color: #666;
       font-weight: 300;
+      display: -webkit-box; /* 必须结合的属性，将对象作为弹性伸缩盒显示 */
+      -webkit-box-orient: vertical; /* 必须结合的属性，设置或检索伸缩盒对象的子元素的排列方式 */
+      -webkit-line-clamp: 3; /* 限制在一个块元素显示的文本的行数，这里限制为3行 */
+      overflow: hidden; /* 隐藏超出部分 */
+      text-overflow: ellipsis; /* 显示省略号 */
+      width: 60em; /* 或者其他固定宽度 */
+      line-height: 1.2em; /* 建议设置行高，有助于精确控制行数 */
+      max-height: 4.0em; /* N * line-height */
+      min-height: 3em;
+
     }
     .footer {
       display: flex;
       justify-content: left;
       align-items: center;
-      margin-top: 20px;
-      .time {
+      margin: 10px 0px;
+      font-weight: 300;
+      .label {
+        display: flex;
+        flex-direction: row;
+      }
+      .divider {
+        border: 1px solid #050505;
+        width: 1px;
+        height: 10px;
+        margin: 0px 5px;
       }
       .tag {
         display: flex;
         flex-direction: row;
-        .tagItem {
-        }
+      }
+      .time {
+        display: flex;
+        flex-direction: row;
       }
     }
     .tag {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
+      font-weight: 300;
+
       .label {
         display: flex;
         align-items: center;
         justify-content: center;
+        font-weight: 300;
+
         .labelItem {
           display: flex;
           align-items: center;
+          margin-left: 10px;
+          font-weight: 300;
         }
       }
     }

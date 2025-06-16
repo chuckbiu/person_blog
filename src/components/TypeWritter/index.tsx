@@ -13,12 +13,10 @@ const TypewriterCom: React.FC<IProps> = ({ subTitle }) => {
                     onInit={(typewriter) => {
                         typewriter.typeString(subTitle)
                             .callFunction(() => {
-                                console.log('String typed out!');
                             })
                             .pauseFor(2500)
                             .deleteChars(10)
                             .callFunction(() => {
-                                console.log('All strings were deleted');
                             })
                             .start();
                     }
