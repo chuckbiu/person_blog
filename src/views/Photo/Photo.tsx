@@ -3,7 +3,7 @@ import PhotoStyles from "./index.module.less";
 import 'antd/dist/reset.css';
 import PhotoCard from "./PhotoCard/PhotoCard";
 import { Empty } from 'antd';
-import { fetchData } from "@/utils/apis/getPhoto"
+import { fetchData } from "../../utils/apis/getPhoto"
 import Layout from "../../components/Layout/Layout";
 // interface PhotoItems {
 //   title: string;

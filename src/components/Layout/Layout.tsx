@@ -13,26 +13,26 @@ interface Props {
   classes?: string;
   date?: number;
   rows?: number;
+  children?: React.ReactNode;
 }
 
 const Layout: React.FC<Props> = ({
   title,
-  className,
-  setNavShow,
-  loading,
+  // className,
+  // setNavShow,
+  // loading,
   children,
-  classes,
-  date,
-  isPost = false,
-  rows
+  // classes,
+  // date,
+  // isPost = false,
+  // rows
 }) => {
 
 
   return (
     <>
       {
-        title?.length > 0 ? <PageTitle title={title} >
-        </PageTitle> : <div style={{ height: '80px' }}></div>
+        title ? <PageTitle title={title} /> : <div style={{ height: '80px' }}></div>
       }
       <div className={s.content}>{children}</div>
     </>

@@ -35,7 +35,7 @@ const Section: React.FC<SectionProps> = () => {
     }, [page])
     return (
         <section className={SectionStyle.section}>
-            {data?.map((item) => (
+            {data?.map((item: any) => (
                 <TableCard key={item._id} title={item.title} onClick={() => navigate(`/post?_id=${item._id}`)} summary={item.summary}  createBy={item.createBy} updateBy={item.updateBy} loading={loading}/>
             ))}
             <MyPagination total={total} defaultPageSize={6} setPage={setPage}/>

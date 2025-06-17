@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.module.less';
 import { blogAdminUrl } from '../../utils/constant'
-import Layout from '@/components/Layout/Layout'
+import Layout from "../../components/Layout/Layout";
 interface SayType {
   id: string;
   content: string;

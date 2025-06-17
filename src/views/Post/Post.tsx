@@ -16,7 +16,7 @@ const useScrollToTop = () => {
     }, [location.pathname]); // 依赖项为 location.pathname，确保只有路径改变时才触发
 };
 const Post: React.FC = () => {
-    const [loading, setLoading] = useState(true)
+    // const [loading, setLoading] = useState(true)
     const [data, setData] = useState<any>()
     // const { _id } = useLocation()
     const [searchParams, setSearchParams] = useSearchParams()
@@ -25,7 +25,7 @@ const Post: React.FC = () => {
     useEffect(() => {
 
         const fetchData = async () => {
-            setLoading(true)
+            // setLoading(true)
             const { data } = await models.blog_tpl_post.list({
                 envType: "prod",
                 filter: {
@@ -43,7 +43,6 @@ const Post: React.FC = () => {
             // 返回查询到的数据和总数
             if (data?.records.length >= 0) {
                 setData(data.records[0].wznr)
-                setLoading(false)
             }
         }
         fetchData()

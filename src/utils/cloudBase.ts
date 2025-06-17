@@ -11,6 +11,7 @@ export const db = app.database();
 
 export const _ = db.command;
 
-await auth.signInAnonymously(); // 或者使用其他登录方式
-
+(async() => {
+    await auth.signInAnonymously(); // 或者使用其他登录方式
+})()
 export const models = app.models;

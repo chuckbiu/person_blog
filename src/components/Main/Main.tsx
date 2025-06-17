@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import MainStyle from "./index.module.less";
 import RouterLoading from "../Router-loading";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 

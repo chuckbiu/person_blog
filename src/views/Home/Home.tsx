@@ -14,11 +14,10 @@ const Home: React.FC<HomeProps> = () => {
   const [subTitle, setSubTitle] = React.useState<string>(''); // 副标题
 
   useEffect(() => {
-  
     getTitle.then(res => {
-      setSubTitle(res)
+      setSubTitle(res as string)
     })
-  });
+  },[]);
   return (
     <>
       <div className={HomeStyle.container}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { marked } from 'marked';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/monokai-sublime.css';
@@ -6,10 +6,13 @@ import "github-markdown-css/github-markdown.css";
 import s from './index.module.less';
 import GithubSlugger from 'github-slugger';
 
+import { tocPros, MarkdownViewerProps } from './types'
+
+
 // MarkdownViewer 组件：接收 markdown 字符串，渲染 HTML 并生成目录
-export function MarkdownViewer({ markdown }) {
+export function MarkdownViewer({ markdown }: MarkdownViewerProps) {
   const [html, setHtml] = useState('');
-  const [headings, setHeadings] = useState([]);
+  const [headings, setHeadings] = useState<tocPros[]>([]);
 
   useEffect(() => {
     const slugger = new GithubSlugger();
@@ -30,23 +33,30 @@ export function MarkdownViewer({ markdown }) {
       renderer,
       gfm: true,
       breaks: true,
-      highlight: code => hljs.highlightAuto(code).value
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
+      highlight: (code: string) => { return hljs.highlightAuto(code).value }
     });
 
     // 解析 markdown 得到原生 HTML
     const rawHtml = marked.parse(markdown || '');
-
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     setHtml(rawHtml);
     slugger.reset(); // 每次渲染前重置状态
 
     // 提取所有标题生成目录数据
     const container = document.createElement('div');
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     container.innerHTML = rawHtml;
     const headingNodes = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const toc = [];
+    const toc: tocPros[] = [];
     headingNodes.forEach(node => {
       toc.push({
         id: node.id,
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         text: node.innerText || node.textContent,
         level: Number(node.tagName.charAt(1))
       });

@@ -6,7 +6,7 @@ import Wechat from './Wechat';
 import QQ from './QQ';
 import WechatQR from './WechatQR';
 import QQLR from './QQqrcode';
-import { githubUrl } from '@/utils/constant'
+import { githubUrl } from '../../../../utils/constant'
 
 const AccountCard: React.FC = () => {
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
