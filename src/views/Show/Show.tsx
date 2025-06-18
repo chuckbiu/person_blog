@@ -4,7 +4,7 @@ import Layout from "../../components/Layout/Layout";
 
 const Show = () => {
     const [composition, setComposition] = React.useState([{
-        id: 1, title: "Vue3 组件库", image: "https://img.picui.cn/free/2025/06/13/684bd13ab4f55.png", description: "优雅而强大的 Vue 3 组件库为开发者打造的下一代组件库", link: 'https://www.silverui.asia/'
+        id: 1, title: "Vue3 组件库", image: "https://img.picui.cn/free/2025/06/13/684bd13ab4f55.png", description: "优雅而强大的 Vue 3 组件库为开发者打造的下一代组件库", link: 'http://139.9.177.45:3444/'
     }, {
         id: 2,
         title: "后端渲染Nuxt 网站",
@@ -15,14 +15,16 @@ const Show = () => {
     {
         id: 3,
         title: "前台模板项目",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-        description: "这是一个描述"
+        image: "https://img.picui.cn/free/2025/06/18/68529518a99d5.png",
+        link: "http://43.136.232.43:30086/YangHai/vue-front-template",
+        description: "简化前端开发流程 常用函数封装 脚手架封装"
     },
     {
         id: 4,
-        title: "Vue3 + Ts 后台管理",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-        description: "这是一个描述"
+        title: "学校服务小程序 比赛作品",
+        image: "https://img.picui.cn/free/2025/06/18/685295d18178b.png",
+        link: "https://github.com/chuckbiu/XiaoCxApril.git",
+        description: "Uniapp 框架开发的小程序 展示多种学校服务"
     }
     ])
     return (

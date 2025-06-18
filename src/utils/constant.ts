@@ -4,7 +4,7 @@ export const env = 'chuck-blog-9gwoks523f0cdf8a';
 export const source_github = 'https://github.com/chuckbiu/person_blog';
 
 export const icp_site = 'https://beian.miit.gov.cn/#/Integrated/index';
-export const icp_no = '正在备案申请中';
+export const icp_no = '赣ICP备2025063742号-1';
 
 export const blogAdminUrl = 'https://img.picui.cn/free/2025/06/12/684a845976686.jpg';
 

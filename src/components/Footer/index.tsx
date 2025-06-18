@@ -11,10 +11,9 @@ const Footer: React.FC = () => {
             <span>
                 | 
             </span>
-            <span>
-
-                { icp_no ? `备案号：${icp_no}` : ''}
-            </span>
+            <a href="https://beian.miit.gov.cn/" className={FooterStyle.yuming} target="_blank">
+                { icp_no ? `备案号：${icp_no}` : '正在备案中...'}
+            </a>
         </footer> 
     )
 }

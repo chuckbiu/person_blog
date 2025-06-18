@@ -32,6 +32,27 @@
                 font-size: 20px;
                 display: flex;
                 justify-content: space-around;
+                align-items: center;
+                .iconButton { /* 新增：为图标添加可点击样式 */
+                    cursor: pointer;
+                    transition: transform 0.2s ease-out, color 0.2s ease-out; /* 添加过渡效果 */
+                    display: flex; /* 让图标内部居中 */
+                    justify-content: center;
+                    align-items: center;
+                    width: 36px; /* 为每个图标按钮设置一个点击区域大小 */
+                    height: 36px;
+                    border-radius: 50%; /* 圆形点击区域，可选 */
+
+                    &:hover {
+                        color:  @main-color;/* 鼠标悬停颜色，假设 common.less 中有定义 */
+                        background-color: fade( @main-color, 10%); /* 悬停背景色 */
+                    }
+
+                    &:active {
+                        transform: scale(0.85); /* 点击时缩小图标，制造按压感 */
+                        color: @main-color; /* 按下时的颜色，假设 common.less 中有定义 */
+                    }
+                }
             }
         }
         .articleItem {
@@ -41,6 +62,23 @@
             height: 40px;
             width: 100%;
             background-color: @main-color;
+            border-radius: @midRadius;
+            padding: 0 20px;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 悬停阴影效果 */
+                transform: translateY(-2px); /* 悬停微移效果 */
+            }
+        }
+        .skeletonStyle {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 40px;
+            width: 100%;
             border-radius: @midRadius;
             padding: 0 20px;
             align-items: center;
